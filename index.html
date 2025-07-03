@@ -3,16 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chore Checklist</title>
+  <meta name="description" content="Beautiful, modern chore checklist app. Organize your daily tasks with style.">
+  <meta name="keywords" content="chore, checklist, todo, tasks, productivity">
+  <meta name="author" content="Your Name">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chore Checklist - Beautiful Task Management">
+  <meta property="og:description" content="A modern, responsive chore tracking application">
+  <meta property="og:image" content="https://your-domain.vercel.app/preview.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Chore Checklist">
+  <meta property="twitter:description" content="Beautiful, modern chore tracking app">
+  
+  <title>✓ Chore Checklist - Beautiful Task Management</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✓</text></svg>">
 </head>
 <body>
   <div class="container">
-    <h1>Chore Checklist</h1>
-    <textarea id="choreInput" placeholder="Enter chores, one per line..."></textarea>
-    <button onclick="generateChecklist()">Generate Checklist</button>
-    <ul id="choreList"></ul>
+    <h1>✓ Chore Checklist</h1>
+    
+    <div class="input-section">
+      <textarea 
+        id="choreInput" 
+        placeholder="Enter your chores, one per line...
+        
+Example:
+- Take out trash
+- Do laundry  
+- Clean kitchen"
+        aria-label="Enter your chores, one per line"
+      ></textarea>
+      <button onclick="generateChecklist()" aria-label="Create checklist from entered chores">
+        Create My Checklist
+      </button>
+    </div>
+
+    <div class="checklist-section">
+      <div id="stats" class="stats" style="display: none;" role="status" aria-live="polite">
+        <span id="completed-count">0 of 0 completed</span>
+        <span id="progress-percent">0%</span>
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+      <ul id="choreList" role="list">
+        <div class="empty-state">
+          Your chores will appear here once you create your checklist ✨
+        </div>
+      </ul>
+    </div>
   </div>
+
   <script src="app.js"></script>
 </body>
 </html>
