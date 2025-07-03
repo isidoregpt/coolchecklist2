@@ -5,9 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "python -m http.server 8000",
-    "build": "echo 'No build step required for static site'",
-    "start": "npm run dev",
-    "deploy": "vercel --prod"
+    "start": "npm run dev"
   },
   "keywords": [
     "chore",
@@ -27,11 +25,5 @@
   "bugs": {
     "url": "https://github.com/yourusername/chore-checklist/issues"
   },
-  "homepage": "https://chore-checklist.vercel.app",
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "devDependencies": {
-    "vercel": "^32.0.0"
-  }
+  "homepage": "https://chore-checklist.vercel.app"
 }
