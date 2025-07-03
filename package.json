@@ -1,0 +1,37 @@
+{
+  "name": "chore-checklist",
+  "version": "1.0.0",
+  "description": "A beautiful, modern chore checklist application built with vanilla HTML, CSS, and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'No build step required for static site'",
+    "start": "npm run dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "chore",
+    "checklist",
+    "todo",
+    "tasks",
+    "productivity",
+    "responsive",
+    "pwa"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/chore-checklist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/chore-checklist/issues"
+  },
+  "homepage": "https://chore-checklist.vercel.app",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
